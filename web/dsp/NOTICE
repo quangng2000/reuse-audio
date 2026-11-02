@@ -1,0 +1,8 @@
+This streaming DSP is derived from the NVIDIA Real-time RE-USE online audio
+transform, pinned by tools/streaming-export and adapted for Rust/WebAssembly.
+Copyright (c) 2025 NVIDIA CORPORATION. NVIDIA Source Code License v1 applies.
+Research and education only; not licensed for commercial product use.
+
+The sealed Hann coefficients are copied from this repository's Android
+PeriodicHann640, generated with PyTorch 2.10.0 torch.hann_window(640), float32.
+RustFFT and wasm-bindgen retain their MIT OR Apache-2.0 dependency licenses.

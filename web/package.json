@@ -1,0 +1,27 @@
+{
+  "name": "@reuse-audio/web-streaming",
+  "version": "0.1.0-experimental.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test tests/*.test.ts src/live/tests/*.test.ts",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "onnxruntime-web": "1.22.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@webgpu/types": "^0.1.64",
+    "tsx": "^4.20.6",
+    "typescript": "5.9.3",
+    "vite": "8.3.5"
+  }
+}

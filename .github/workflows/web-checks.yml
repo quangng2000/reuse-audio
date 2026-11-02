@@ -1,0 +1,35 @@
+name: Web streaming checks
+on:
+  pull_request:
+    paths: ['web/**', 'tools/web-streaming-export/**', '.github/workflows/web-checks.yml']
+  push:
+    branches: [main, 'codex/webgpu-streaming']
+    paths: ['web/**', 'tools/web-streaming-export/**', '.github/workflows/web-checks.yml']
+permissions:
+  contents: read
+jobs:
+  portable-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r tools/web-streaming-export/requirements.txt
+      - run: PYTHONPATH=tools/web-streaming-export python -m unittest discover -s tools/web-streaming-export/tests -v
+      - run: cargo test --locked --manifest-path web/dsp/Cargo.toml
+      - run: cargo install wasm-bindgen-cli --version 0.2.105 --locked
+      - run: cargo build --release --locked --target wasm32-unknown-unknown --manifest-path web/dsp/Cargo.toml
+      - run: wasm-bindgen web/dsp/target/wasm32-unknown-unknown/release/reuse_streaming_dsp.wasm --target web --out-dir web/dsp/pkg
+      - run: npm ci && npm test && npm run build
+        working-directory: web
+      - run: node tests/wasm.mjs && node tests/wasm-reference.mjs
+        working-directory: web/dsp

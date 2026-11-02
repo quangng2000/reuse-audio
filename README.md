@@ -14,6 +14,9 @@ inference needs no Python, CUDA, or server.
   bounded file processing, progress and cancellation. See [Android setup](android/README.md).
 - **Android streaming research SDK** — stateful FP32 exits 3–12, arbitrary PCM
   chunks, reset, tail flushing and cancellation. See [Android streaming](android/reuse-streaming/README.md).
+- **Experimental browser streaming** — React microphone demo, Rust/WASM audio
+  transforms and local WebGPU inference. Four-layer reference validation; browser
+  and device timing must be measured. See [browser setup](web/README.md).
 - Mac command-line tools and iPhone/iPad examples consume the existing Swift APIs.
 
 The Swift products, module names and existing public APIs remain unchanged.
@@ -32,6 +35,8 @@ file transport without copying the neural engine into application sources.
 - [`models`](models) — shared model provenance and licenses; downloaded weights stay out of Git.
 - [`tools/model-export`](tools/model-export) — shared checkpoint fetching, ONNX export and validation.
 - [`tools/streaming-export`](tools/streaming-export) — stateful streaming ONNX exports and independent CPU validation.
+- [`web`](web) — experimental browser streaming, React demo and Rust/WASM DSP.
+- [`tools/web-streaming-export`](tools/web-streaming-export) — browser model partitioning and parity fixtures.
 - [`apple/scripts`](apple/scripts) — Apple build, setup and smoke-test commands.
 
 The root `Package.swift` remains the Swift Package entry point. Android uses

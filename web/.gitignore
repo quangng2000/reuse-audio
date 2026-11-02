@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/model/
+dsp/pkg/
+dsp/target/
+test-results/
+playwright-report/
+.env.local
+!validation/
+!validation/*.json
+!validation/README.md

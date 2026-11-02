@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-11-02T05:46:56.206Z",
+  "test": "Chrome synthetic microphone 60-second automatic stop/record/cleanup",
+  "errors": [],
+  "status": "complete",
+  "warnings": [],
+  "metrics": [
+    "Recorded\n60.0 s",
+    "Mean frame\n11.4 ms",
+    "Output gaps\n4.0 ms",
+    "Over 20 ms\n13 / 3001"
+  ],
+  "recordings": [
+    {
+      "label": "Original microphone",
+      "samples": 960000,
+      "sampleRate": 16000,
+      "peak": 0.989959716796875,
+      "rms": 0.1270779698544341
+    },
+    {
+      "label": "RE-USE restored",
+      "samples": 960000,
+      "sampleRate": 16000,
+      "peak": 0.0025634765625,
+      "rms": 0.000015718466139183796
+    }
+  ],
+  "trackStates": [
+    "ended"
+  ],
+  "contextStates": [
+    "closed"
+  ],
+  "workersTerminated": [
+    true
+  ]
+}
