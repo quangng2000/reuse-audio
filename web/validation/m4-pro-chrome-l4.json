@@ -1,0 +1,38 @@
+{
+  "manifestSha256": "dec2456f9cf808a73b8e039e8de7a04fd90d28ef1a1c60858b56a6aac455d8e5",
+  "metrics": [
+    {
+      "ms": 51.474999997764826,
+      "magnitude": 1.5273690223693848e-7,
+      "phase": 0.000025987625122070312
+    },
+    {
+      "ms": 14.269999999552965,
+      "magnitude": 5.681067705154419e-8,
+      "phase": 0.00002562999725341797
+    },
+    {
+      "ms": 12.269999999552965,
+      "magnitude": 1.30385160446167e-7,
+      "phase": 0.00003457069396972656
+    }
+  ],
+  "stateError": 0.000010728836059570312,
+  "audio": {
+    "maximum": 0.000065614003688097,
+    "samples": 1600,
+    "timing": {
+      "frames": 50,
+      "meanMs": 10.738299999907612,
+      "p95Ms": 10.825000002980232,
+      "maxMs": 16.605000000447035,
+      "over20ms": 0
+    }
+  },
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "gpu": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "description": ""
+  }
+}

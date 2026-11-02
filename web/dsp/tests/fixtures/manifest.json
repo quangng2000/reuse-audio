@@ -1,0 +1,35 @@
+{
+  "source": "independent NumPy CPU FFT/WOLA; sealed PyTorch Hann",
+  "numpy": "2.5.4",
+  "seed": 421,
+  "frames": 6,
+  "files": {
+    "frames.f32": {
+      "shape": [
+        6,
+        640
+      ],
+      "sha256": "ebc6814c8abca290ccb9c9458598363de285b3149e90d0f254d7cb0010fcfd0e"
+    },
+    "spectra.f32": {
+      "shape": [
+        6,
+        642
+      ],
+      "sha256": "1378c870d224462ef8ff2f786c70a9c36e7c66c2e8099c619060a0f64bc21e28"
+    },
+    "output.f32": {
+      "shape": [
+        1600
+      ],
+      "sha256": "49fc53de06370e62fc5df9085a8a8cef855027eb4b44f05fe91124e4ed5f1070"
+    },
+    "input.f32": {
+      "shape": [
+        1600
+      ],
+      "sha256": "88519cbdf847fc0f3cf2fc79dae64d696dfa0b4219377ddd1fc85e8944ab61aa"
+    }
+  },
+  "scope": "DSP only; no model inference"
+}

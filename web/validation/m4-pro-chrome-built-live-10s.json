@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-11-02T05:50:45.396Z",
+  "test": "Chrome synthetic microphone 10s",
+  "errors": [],
+  "status": "complete",
+  "warnings": [],
+  "metrics": [
+    "Recorded\n10.1 s",
+    "Mean frame\n11.3 ms",
+    "Output gaps\n4.0 ms",
+    "Over 20 ms\n0 / 505"
+  ],
+  "recordings": [
+    {
+      "label": "Original microphone",
+      "samples": 161152,
+      "sampleRate": 16000,
+      "peak": 0.989959716796875,
+      "rms": 0.12715386097242304
+    },
+    {
+      "label": "RE-USE restored",
+      "samples": 161152,
+      "sampleRate": 16000,
+      "peak": 0.0025634765625,
+      "rms": 0.00003837279244172686
+    }
+  ],
+  "details": [
+    "First restored output: 56 ms after capture started. Slowest processing frame: 18.6 ms.",
+    "A frame represents 20 ms of audio. These processing times exclude microphone, playback, network and call buffering. Output gaps count underruns after the first restored sample. If inference falls behind, the test stops."
+  ],
+  "trackStates": [
+    "ended"
+  ],
+  "contextStates": [
+    "closed"
+  ],
+  "workersTerminated": [
+    true
+  ]
+}
